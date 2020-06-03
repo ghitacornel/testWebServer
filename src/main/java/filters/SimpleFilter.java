@@ -4,8 +4,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-// can be defined through web.xml also
-// web filter to all URLs
+// web filter mapped to all URLs
 @WebFilter("/*")
 public class SimpleFilter implements javax.servlet.Filter {
 

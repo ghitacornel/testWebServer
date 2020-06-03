@@ -10,7 +10,6 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-// can be defined through web.xml also
 @WebServlet(
         urlPatterns = "/servlet",
         loadOnStartup = 1
@@ -20,13 +19,6 @@ public class SimpleServlet extends HttpServlet {
     @Override
     public void init() {
         System.out.println(this + " initialised");
-        {
-            Enumeration<String> parameterNames = getServletConfig().getServletContext().getInitParameterNames();
-            while (parameterNames.hasMoreElements()) {
-                String name = parameterNames.nextElement();
-                System.out.println("context init parameter name = " + name + " , value = " + getServletConfig().getServletContext().getInitParameter(name));
-            }
-        }
     }
 
     @Override

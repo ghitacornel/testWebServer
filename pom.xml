@@ -13,24 +13,16 @@
         <maven.compiler.target>14</maven.compiler.target>
         <maven.compiler.source>14</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- no need for web.xml -->
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+
     </properties>
 
     <build>
         <!-- ensure known final build name in order to publish to image -->
         <!-- use versioning -->
         <finalName>testWebServer</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version>
-                <!-- web.xml no longer mandatory but used here as example -->
-                <configuration>
-                    <failOnMissingWebXml>true</failOnMissingWebXml>
-                    <webXml>src/main/resources/WEB-INF/web.xml</webXml>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 
     <dependencies>
