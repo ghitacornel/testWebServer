@@ -1,5 +1,9 @@
-add filter example
 add session example
 add automated tests
+add data source example
 
 http://localhost:8080/testWebServer/servlet
+
+docker-compose up
+docker image ls
+docker rmi testwebserver_samplewar

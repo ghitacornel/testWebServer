@@ -17,6 +17,7 @@
 
     <build>
         <!-- ensure known final build name in order to publish to image -->
+        <!-- use versioning -->
         <finalName>testWebServer</finalName>
         <plugins>
             <plugin>

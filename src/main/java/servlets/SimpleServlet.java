@@ -10,8 +10,8 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
+// can be defined through web.xml also
 @WebServlet(
-        name = "ASimpleServlet",
         urlPatterns = "/servlet",
         loadOnStartup = 1
 )
@@ -49,7 +49,7 @@ public class SimpleServlet extends HttpServlet {
         resp.getWriter().write("http DELETE with parameters " + getParametersAsString(req) + " " + new Date());
     }
 
-    private String getParametersAsString(HttpServletRequest req) {
+    private static String getParametersAsString(HttpServletRequest req) {
         Map<String, String> result = new HashMap<>();
         Enumeration<String> parameterNames = req.getParameterNames();
         while (parameterNames.hasMoreElements()) {

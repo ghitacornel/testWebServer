@@ -5,6 +5,9 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <!-- can be an empty file or removed entirely -->
+
+    <!-- application related global settings -->
     <context-param>
         <param-name>applicationContextParameterName1</param-name>
         <param-value>applicationContextParameterValue1</param-value>
