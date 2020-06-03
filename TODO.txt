@@ -6,4 +6,4 @@ http://localhost:8080/testWebServer/servlet
 
 docker-compose up
 docker image ls
-docker rmi testwebserver_samplewar
+docker rmi tomcat_deployment
