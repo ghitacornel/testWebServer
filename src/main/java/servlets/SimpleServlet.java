@@ -23,12 +23,6 @@ public class SimpleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if (req.getParameterMap().containsKey("error")) {
-            String errorMessage = req.getParameter("error");
-            resp.setStatus(500);
-            resp.getWriter().write(errorMessage);
-            return;
-        }
         resp.getWriter().write("http GET with parameters " + getParametersAsString(req) + " " + new Date());
     }
 
