@@ -1,8 +1,12 @@
-add session example
-add automated tests
 add data source example
 
 http://localhost:8080/testWebServer/servlet
+
+http://localhost:8080/testWebServer/session?status
+http://localhost:8080/testWebServer/session?create
+http://localhost:8080/testWebServer/session?status
+http://localhost:8080/testWebServer/session?destroy
+http://localhost:8080/testWebServer/session?status
 
 docker-compose up
 docker image ls
