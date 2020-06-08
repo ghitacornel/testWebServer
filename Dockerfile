@@ -9,6 +9,3 @@ ADD docker/postgresql-42.2.13.jar /usr/local/tomcat/lib/
 
 # copy server datasource config
 ADD docker/context.xml /usr/local/tomcat/conf/
-
-# start the web server
-CMD ["catalina.sh", "run"]
