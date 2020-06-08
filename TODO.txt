@@ -8,6 +8,7 @@ http://localhost:8080/testWebServer/session?status
 http://localhost:8080/testWebServer/session?destroy
 http://localhost:8080/testWebServer/session?status
 
+mvn clean install -DskipTests
 docker-compose up
 docker image ls
 docker rmi tomcat_deployment

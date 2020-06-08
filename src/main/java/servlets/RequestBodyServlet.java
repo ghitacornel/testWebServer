@@ -30,10 +30,9 @@ public class RequestBodyServlet extends HttpServlet {
         try (InputStream inputStream = request.getInputStream()) {
             if (inputStream != null) {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                char[] charBuffer = new char[128];
-                int bytesRead;
-                while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
-                    body.append(charBuffer, 0, bytesRead);
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    body.append(line);
                 }
             }
         }
