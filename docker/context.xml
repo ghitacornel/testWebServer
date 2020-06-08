@@ -5,7 +5,7 @@
     <!-- use DOCKER container name for database host -->
     <Resource auth="Container"
               driverClassName="org.postgresql.Driver"
-              maxActive="100" maxIdle="30" maxWait="10000"
+              maxActive="4" maxIdle="2" maxWait="2000"
               name="jdbc/TestDB" type="javax.sql.DataSource"
               url="jdbc:postgresql://local_postgres:5432/mydatabase"
               username="cornel" password="sefusefu"/>
