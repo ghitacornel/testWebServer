@@ -8,10 +8,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-public class TestRequestBodyServlet {
+public class TestRequestBodyServlet extends TestErrorServlet {
 
-    private static final String GET_URL = "http://localhost:8080/testWebServer/body";
-    private static final String POST_URL = "http://localhost:8080/testWebServer/body";
+    private static final String GET_URL = URL + "/testWebServer/body";
+    private static final String POST_URL = URL + "/testWebServer/body";
 
     @Test
     public void testGet() throws Exception {

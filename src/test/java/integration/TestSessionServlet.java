@@ -6,12 +6,12 @@ import org.junit.Test;
 import java.net.*;
 import java.util.List;
 
-public class TestSessionServlet {
+public class TestSessionServlet extends AbstractTest {
 
     private static final String JSESSIONID = "JSESSIONID";
-    private static final String STATUS_URL = "http://localhost:8080/testWebServer/session?status";
-    private static final String CREATE_URL = "http://localhost:8080/testWebServer/session?create";
-    private static final String DELETE_URL = "http://localhost:8080/testWebServer/session?delete";
+    private static final String STATUS_URL = URL + "/testWebServer/session?status";
+    private static final String CREATE_URL = URL + "/testWebServer/session?create";
+    private static final String DELETE_URL = URL + "/testWebServer/session?delete";
 
     @Test
     public void testCRUD() throws Exception {

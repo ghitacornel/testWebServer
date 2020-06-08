@@ -6,12 +6,12 @@ import org.junit.Test;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class TestSimpleServlet {
+public class TestSimpleServlet extends AbstractTest {
 
-    private static final String GET_URL = "http://localhost:8080/testWebServer/servlet";
-    private static final String GET_POST = "http://localhost:8080/testWebServer/servlet";
-    private static final String GET_PUT = "http://localhost:8080/testWebServer/servlet";
-    private static final String GET_DELETE = "http://localhost:8080/testWebServer/servlet";
+    private static final String GET_URL = URL + "/testWebServer/servlet";
+    private static final String GET_POST = URL + "/testWebServer/servlet";
+    private static final String GET_PUT = URL + "/testWebServer/servlet";
+    private static final String GET_DELETE = URL + "/testWebServer/servlet";
 
     @Test
     public void testGet() throws Exception {

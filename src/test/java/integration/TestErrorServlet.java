@@ -8,9 +8,9 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-public class TestErrorServlet {
+public class TestErrorServlet extends AbstractTest {
 
-    private static final String GET_URL = "http://localhost:8080/testWebServer/error";
+    private static final String GET_URL = URL + "/testWebServer/error";
 
     @Test
     public void testGet() throws Exception {

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
-final public class HttpUtils {
+final class HttpUtils {
 
     private HttpUtils() {
         // utility class
