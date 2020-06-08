@@ -2,6 +2,8 @@ version: '3.6'
 
 services:
 
+  # database service and server service must be in the same network
+  # do not expose database port out of the network
   postgres_service:
     image: postgres:latest
     container_name: local_postgres
@@ -9,8 +11,6 @@ services:
       - POSTGRES_USER=cornel
       - POSTGRES_PASSWORD=sefusefu
       - POSTGRES_DB=mydatabase
-    ports:
-      - 5432:5432
     networks:
       - testWebServerNetwork
 
