@@ -12,10 +12,14 @@ abstract class AbstractTest {
     @BeforeClass
     public static void setUp() throws Exception {
         System.out.println("prepare DOCKER");
-        Process p1 = Runtime.getRuntime().exec("docker container stop tomcat_container");
-        p1.waitFor();
-        Process p2 = Runtime.getRuntime().exec("docker container rm tomcat_container");
-        p2.waitFor();
+        Process p1_1 = Runtime.getRuntime().exec("docker container stop tomcat_container");
+        p1_1.waitFor();
+        Process p1_2 = Runtime.getRuntime().exec("docker container stop local_postgres");
+        p1_2.waitFor();
+        Process p2_1 = Runtime.getRuntime().exec("docker container rm tomcat_container");
+        p2_1.waitFor();
+        Process p2_2 = Runtime.getRuntime().exec("docker container rm local_postgres");
+        p2_2.waitFor();
         Process p3 = Runtime.getRuntime().exec("docker rmi tomcat_deployment");
         p3.waitFor();
         Process p4 = Runtime.getRuntime().exec("docker-compose up");
@@ -26,10 +30,14 @@ abstract class AbstractTest {
     @AfterClass
     public static void tearDown() throws Exception {
         System.out.println("stop DOCKER");
-        Process p1 = Runtime.getRuntime().exec("docker container stop tomcat_container");
-        p1.waitFor();
-        Process p2 = Runtime.getRuntime().exec("docker container rm tomcat_container");
-        p2.waitFor();
+        Process p1_1 = Runtime.getRuntime().exec("docker container stop tomcat_container");
+        p1_1.waitFor();
+        Process p1_2 = Runtime.getRuntime().exec("docker container stop local_postgres");
+        p1_2.waitFor();
+        Process p2_1 = Runtime.getRuntime().exec("docker container rm tomcat_container");
+        p2_1.waitFor();
+        Process p2_2 = Runtime.getRuntime().exec("docker container rm local_postgres");
+        p2_2.waitFor();
         Process p3 = Runtime.getRuntime().exec("docker rmi tomcat_deployment");
         p3.waitFor();
         System.out.println("DOCKER stopped");
