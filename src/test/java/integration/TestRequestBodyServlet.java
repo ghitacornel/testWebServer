@@ -24,7 +24,7 @@ public class TestRequestBodyServlet {
         String requestBody = "place a json here";
         try (OutputStream os = connection.getOutputStream()) {
             byte[] input = requestBody.getBytes(StandardCharsets.UTF_8);
-            os.write(input, 0, input.length);
+            os.write(input);
         }
 
         int responseCode = connection.getResponseCode();
@@ -43,7 +43,7 @@ public class TestRequestBodyServlet {
         String requestBody = "place a json here";
         try (OutputStream os = connection.getOutputStream()) {
             byte[] input = requestBody.getBytes(StandardCharsets.UTF_8);
-            os.write(input, 0, input.length);
+            os.write(input);
         }
 
         int responseCode = connection.getResponseCode();
