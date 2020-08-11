@@ -1,12 +1,14 @@
 package integration;
 
+import integration.setup.AbstractTestDockerSetup;
+import integration.utils.HttpUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class TestSimpleServlet extends AbstractTest {
+public class TestSimpleServlet extends AbstractTestDockerSetup {
 
     private static final String GET_URL = URL + "/testWebServer/servlet";
     private static final String GET_POST = URL + "/testWebServer/servlet";

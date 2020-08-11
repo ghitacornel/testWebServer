@@ -1,5 +1,7 @@
 package integration;
 
+import integration.setup.AbstractTestDockerSetup;
+import integration.utils.HttpUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +10,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-public class TestErrorServlet extends AbstractTest {
+public class TestErrorServlet extends AbstractTestDockerSetup {
 
     private static final String GET_URL = URL + "/testWebServer/error";
 

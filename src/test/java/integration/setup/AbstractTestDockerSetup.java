@@ -1,9 +1,9 @@
-package integration;
+package integration.setup;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-abstract class AbstractTest {
+public abstract class AbstractTestDockerSetup {
 
     final private static int PORT = 8080;
     final private static String HOST = "localhost";

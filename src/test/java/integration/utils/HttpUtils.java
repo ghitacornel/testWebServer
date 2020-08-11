@@ -1,10 +1,10 @@
-package integration;
+package integration.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
-final class HttpUtils {
+final public class HttpUtils {
 
     private HttpUtils() {
         // utility class

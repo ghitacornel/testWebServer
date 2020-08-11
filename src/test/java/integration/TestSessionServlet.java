@@ -1,12 +1,14 @@
 package integration;
 
+import integration.setup.AbstractTestDockerSetup;
+import integration.utils.HttpUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.net.*;
 import java.util.List;
 
-public class TestSessionServlet extends AbstractTest {
+public class TestSessionServlet extends AbstractTestDockerSetup {
 
     private static final String JSESSIONID = "JSESSIONID";
     private static final String STATUS_URL = URL + "/testWebServer/session?status";

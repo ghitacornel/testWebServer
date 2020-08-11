@@ -1,5 +1,6 @@
 package integration;
 
+import integration.utils.HttpUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
